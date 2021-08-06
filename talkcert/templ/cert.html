@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="pdfkit-page-size" content="Legal" />
+    <meta name="pdfkit-orientation" content="Landscape" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet"/>
+    <style>
+      * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+      }
+      body {
+        margin: auto;
+        width: 2000px;
+        height: 1214px;
+        background-image: url('{ image }');
+        background-repeat: no-repeat;
+        object-fit: contain;
+      }
+      main {
+        width: 100%;
+        height: 95%;
+        padding: 20% 3rem 0 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+      }
+      .u-uppercase {
+        text-transform: uppercase;
+      }
+      .c-certificate__title, .c-signature__name, .c-certificate__informations, .c-signature__position, strong {
+        color: white;
+      }
+      .c-certificate__title, .c-signature__name, .c-certificate__name {
+        font-family: 'Montserrat';
+      }
+      .c-certificate__informations, .c-signature__position {
+        font-family: 'Open Sans';
+      }
+      .c-certificate__title {
+        font-size: 3rem;
+      }
+      .c-certificate__informations {
+        font-weight: 400;
+        font-size: 1.7rem;
+        width: 90%;
+        line-height: 2rem;
+        letter-spacing: .05rem;
+        text-align: center;
+      }
+      .c-certificate__name {
+        color: #E77B0A;
+        font-size: 4rem;
+        text-align: center;
+      }
+      .c-signatures {
+        width: 65%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+      }
+      .c-signature {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+      .c-signature__name {
+        font-size: 1.5rem;
+      }
+      .c-signature__position {
+        font-size: 1.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h2 class="c-certificate__title u-uppercase">Certificado</h2>
+      <p class="c-certificate__informations">
+        Os Centros Acadêmicos de Ciência da Computação (CACCOMP) e Engenharia da Computação (CAEC), ambos com sede na Rodovia BR 101 Norte, KM 60 Bairro Litorâneo, São Mateus – ES, certificam que
+      </p>
+      <h1 class="c-certificate__name u-uppercase">
+        { nome }
+      </h1>
+      <p class="c-certificate__informations">
+        participou como { categoria } na { edicao }ª edição do evento acadêmico local
+        denominado { evento }, promovido no período de
+        <strong>{ data_inicio }</strong> a
+        <strong>{ data_fim }</strong>, dedicando-se ao total de
+        <strong>{ horas } horas</strong> pela duração do evento e em encontros no
+        período citado, matriculado(a) sob nº <strong>{ matricula }</strong>.
+      </p>
+      <section class="c-signatures">
+        <div class="c-signature">
+          <h3 class="c-signature__name u-uppercase">
+            { codiscente_1 }
+          </h3>
+          <small class="c-signature__position">Co-Organizador(a) Discente</small>
+        </div>
+        <div class="c-signature">
+          <h3 class="c-signature__name u-uppercase">{ codiscente_2 }</h3>
+          <small class="c-signature__position">Co-Organizador(a) Discente</small>
+        </div>
+        <div class="c-signature">
+          <h3 class="c-signature__name u-uppercase">{ docente }</h3>
+          <small class="c-signature__position">Organizador(a) Docente</small>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
